@@ -1,0 +1,73 @@
+<?php
+
+/*
+ * Implements hook_views_api
+ */
+function art_portfolio_views_api() {
+  return array(
+    'api' => 3,
+  ); 
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function art_portfolio_preprocess_node(&$vars) {
+  $node = $vars['node'];
+  if (isset($vars['view']) && isset($vars['view']->style_plugin) && $vars['view']->style_plugin->plugin_name == 'art_portfolio') {
+
+
+	$view = $vars['view'];
+    $options = $view->style_options;
+	$vars['classes_array'][] = $options['row_class'];
+
+    $column = $options['column'];
+    $column_class = "coll-{$column}";
+    $vars['classes_array'][] = $column_class;
+    $layout_mode = 'grid';
+    if(!empty($options['layout_mode'])){
+        $layout_mode = $options['layout_mode'];
+    }
+    if($layout_mode == 'slide'){
+        $vars['theme_hook_suggestions'][] = 'node__' . $node->type . '__slide';
+    }elseif($layout_mode == 'columns'){
+        $vars['theme_hook_suggestions'][] = 'node__' . $node->type . '__columns';
+    }
+    else{
+        $vars['theme_hook_suggestions'][] = 'node__' . $node->type . '__grid';
+    }
+
+  }
+}
+
+
+/**
+ * Implements hook_image_default_styles().
+ */
+function art_portfolio_image_default_styles() {
+  $styles = array();
+
+  $styles['portfolio'] = array(
+    'name' => 'portfolio',
+    'label' => 'Portfolio',
+    'effects' => array(
+      1 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 560,
+          'height' => 400,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}

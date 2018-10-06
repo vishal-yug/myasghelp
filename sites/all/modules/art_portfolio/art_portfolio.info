@@ -1,0 +1,13 @@
+name = Art Portfolio
+description = "Provides template for portfolio pages."
+core = 7.x
+package = ArtModules
+
+dependencies[] = taxonomy
+dependencies[] = views
+
+files[] = art_portfolio.views.inc
+files[] = art_portfolio_plugin_style_portfolio.inc
+
+version = "7.x-1.0"
+core = "7.x"

@@ -1,0 +1,103 @@
+name = Porto7 Shop
+description = Responsive Drupal 7 Theme. 
+core = 7.x
+engine = phptemplate
+version = 4.x
+
+; Define theme CSS.
+stylesheets[all][] = vendor/bootstrap/css/bootstrap.min.css
+stylesheets[all][] = vendor/font-awesome/css/font-awesome.min.css
+stylesheets[all][] = vendor/animate/animate.min.css
+stylesheets[all][] = vendor/simple-line-icons/css/simple-line-icons.min.css
+stylesheets[all][] = vendor/owl.carousel/assets/owl.carousel.min.css
+stylesheets[all][] = vendor/owl.carousel/assets/owl.theme.default.min.css
+stylesheets[all][] = vendor/magnific-popup/magnific-popup.min.css
+stylesheets[all][] = css/theme.css
+stylesheets[all][] = css/theme-elements.css
+stylesheets[all][] = css/theme-blog.css
+stylesheets[all][] = css/theme-shop.css
+stylesheets[all][] = vendor/rs-plugin/css/settings.css
+stylesheets[all][] = vendor/rs-plugin/css/layers.css
+stylesheets[all][] = vendor/rs-plugin/css/navigation.css
+stylesheets[all][] = css/skins/skin-shop-4.css
+stylesheets[all][] = css/demos/demo-shop-4.css
+stylesheets[all][] = css/custom.css
+
+
+
+; Define theme JS libraries.
+scripts[] = vendor/modernizr/modernizr.min.js
+scripts[] = vendor/jquery.appear/jquery.appear.min.js
+scripts[] = vendor/jquery.easing/jquery.easing.min.js
+scripts[] = vendor/jquery-cookie/jquery-cookie.min.js
+;scripts[] = master/style-switcher/style.switcher.js
+scripts[] = vendor/bootstrap/js/bootstrap.min.js
+scripts[] = vendor/common/common.min.js
+scripts[] = vendor/jquery.validation/jquery.validation.min.js
+scripts[] = vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.min.js
+scripts[] = vendor/jquery.gmap/jquery.gmap.min.js
+scripts[] = vendor/jquery.lazyload/jquery.lazyload.min.js
+scripts[] = vendor/isotope/jquery.isotope.min.js
+scripts[] = vendor/owl.carousel/owl.carousel.min.js
+scripts[] = vendor/magnific-popup/jquery.magnific-popup.min.js
+scripts[] = vendor/vide/vide.min.js
+;scripts[] = js/theme.js
+;scripts[] = vendor/rs-plugin/js/jquery.themepunch.tools.min.js
+;scripts[] = vendor/rs-plugin/js/jquery.themepunch.revolution.min.js
+scripts[] = js/views/view.contact.js
+scripts[] = vendor/bootstrap-touchspin/jquery.bootstrap-touchspin.js
+;scripts[] = vendor/elevatezoom/jquery.elevatezoom.js
+;scripts[] = js/demos/demo-shop-4.js
+scripts[] = js/custom.js
+;scripts[] = js/theme.init.js
+
+; Define theme block regions.
+regions[header_top] = Header Top
+regions[header_search] = Header Search
+regions[header_cart] = Header Cart
+regions[currency] = Currency
+regions[language] = Language
+regions[header_menu] = Header Menu
+regions[menu_vertical] = Menu Vertical
+regions[slider] = Slider
+regions[menu_mobile] = Menu Mobile
+regions[before_content] = Before Content
+regions[content] = Content
+regions[sidebar_left] = Left Sidebar
+regions[sidebar_right] = Right Sidebar
+regions[after_content] = After Content
+regions[popup] = Popup
+regions[footer_top] = Footer Top
+
+regions[footer_11] = Footer Box 1.1
+regions[footer_12] = Footer Box 1.2
+regions[footer_13] = Footer Box 1.3
+regions[footer_14] = Footer Box 1.4
+
+regions[footer_bottom] = Footer Bottom
+
+; Define location for panels templates.
+plugins[panels][layouts] = layouts
+
+; Define theme setting defaults.
+settings[breadcrumbs] = 1
+settings[logo_height] = "54"
+settings[sticky_logo_height] = "40"
+settings[sticky_header] = 1
+settings[skin_color] = 0088cc
+settings[secondary_color] = E36159
+settings[tertiary_color] = 2BAAB1
+settings[quaternary_color] = 383f48
+settings[background_color] = light
+settings[site_layout] = wide
+settings[body_background] = porto_backgrounds
+settings[background_select] = az_subtle
+settings[background_select] = az_subtle
+settings[body_background_color] = CCCCCC
+settings[portfolio_columns] = span3
+settings[blog_image] = full
+settings[blog_image_slider] = 1
+settings[blog_share] = 1
+settings[ribbon] = 1
+settings[ribbon_text] = "Get In Touch"
+settings[menu_layout] = "horizontal"
