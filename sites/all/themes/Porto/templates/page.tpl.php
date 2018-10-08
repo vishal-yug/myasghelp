@@ -28,7 +28,7 @@
             <div class="container">
                 <div class="row">
                     <?php if($page['slider']):?>
-                        <div class="col-md-9 col-md-push-3">
+                        <div class="col-md-12 col-md-push-0">
                             <?php print render($page['slider']);?>
 
                         </div>

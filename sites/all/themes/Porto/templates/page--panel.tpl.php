@@ -22,13 +22,20 @@
 
 <div>
 
+	<div class='container'>
+		<div class="row">
+			<div class="col-md-2">
+				Email
+			</div>
+		</div>
+	</div>
     <!---->
     <?php if($page['slider'] || $page['menu_vertical']):?>
     <div class="home-slider-area">
         <div class="container">
             <div class="row">
                 <?php if($page['slider']):?>
-                <div class="col-md-9 col-md-push-3">
+                <div class="col-md-12 col-md-push-0">
                     <?php print render($page['slider']);?>
 
                 </div>
