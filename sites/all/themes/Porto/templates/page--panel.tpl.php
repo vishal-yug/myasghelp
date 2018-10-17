@@ -22,14 +22,8 @@
 
 <div>
 
-	<div class='container'>
-		<div class="row">
-			<div class="col-md-2">
-				Email
-			</div>
-		</div>
-	</div>
-    <!---->
+
+
     <?php if($page['slider'] || $page['menu_vertical']):?>
     <div class="home-slider-area">
         <div class="container">

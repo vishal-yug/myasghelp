@@ -108,11 +108,16 @@ $phone_number = theme_get_setting('phone_number');
 </div>
 <?php if($page['header_menu']):?>
 <div class="header-container header-nav">
-<div class="container">
-<div class="header-nav-main">
-<?php print render($page['header_menu']);?>
+	<div class="container">
+		<div class="header-nav-main">
+			<?php print render($page['header_menu']);?>
+		</div>
+	</div>
 </div>
-</div>
+<div class="header-student-post-form-wrapper">
+	<div class="container">
+		<?php print assignment_help_get_student_post_form(); ?>
+	</div>
 </div>
 <?php endif;?>
 </div>
