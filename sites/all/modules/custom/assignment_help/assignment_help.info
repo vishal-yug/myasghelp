@@ -1,0 +1,4 @@
+name = assignment_help
+description = Manage student post for assignment
+package = myassignment
+core = 7.x

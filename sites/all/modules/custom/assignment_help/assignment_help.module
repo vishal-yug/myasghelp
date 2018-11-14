@@ -1,0 +1,75 @@
+<?php
+
+function assignment_help_get_student_post_form() {
+  $module_path = drupal_get_path('module', 'assignment_help');
+
+  drupal_add_js($module_path . '/js/handlecounter.js');
+  drupal_add_js($module_path . '/js/assignment_help.js');
+  drupal_add_css($module_path . '/css/post-help.css');
+
+  $form = drupal_get_form('student_assignment_help_post_form');
+  $output = drupal_render($form);
+
+  return $output;
+}
+
+/**
+ * Form builder to prepare
+ */
+function student_assignment_help_post_form($form,$form_state)
+{
+  $form['mail'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Email'),
+    '#attributes' => array('placeholder' => 'Email')
+  );
+
+  $form['subject'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Enter Subject'),
+    '#attributes' => array('placeholder' => 'Enter Subject'),
+  );
+
+  $form['no_of_pages'] = array(
+   '#type' => 'textfield',
+   '#title' => t('Number of pages/words you require'),
+   '#attributes' => array('id' => 'noofpages'),
+   '#disabled' => true,
+   '#default_value' => 1
+  );
+
+  $form['date'] = array(
+    '#type' => 'date_popup',
+    '#size' => 26,
+    '#date_format' => variable_get('date_format_short', 'm/d/Y - H:i'),
+    '#default_value' => '',
+    '#prefix' => '<div class="col1">',
+    '#suffix' => '</div>',
+    '#required' => true,
+    '#title' => t('Choose your assignment deadline'),
+  );
+
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => 'Free Assistance'
+  );
+
+  return $form;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function assignment_help_theme()
+{
+  $themes = array();
+
+  $themes['student_assignment_help_post_form'] = array(
+    'render element' => 'form',
+    'template' => 'templates/student-assignment-help-post-form'
+  );
+
+  return $themes;
+}
+
+

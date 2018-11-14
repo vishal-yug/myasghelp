@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Award module.
+ */
+
+/**
+ * hook_install 
+ */
+function assignment_help_install() 
+{
+  drupal_set_installed_schema_version('assignment_help', '7000');
+}
+
